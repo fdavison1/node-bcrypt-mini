@@ -27,5 +27,9 @@ module.exports = {
         } else {
             return res.status(401).send('Incorrect email/password')
         }
+    },
+    logout: async (req, res) => {
+        req.session.destroy()
+        res.sendStatus(200)
     }
 }

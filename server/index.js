@@ -22,6 +22,7 @@ app.use(
 //endpoints
 app.post('/auth/signup', c.signup)
 app.post('/auth/login', c.login)
+app.get('/auth/logout', c.logout)
 
 massive(CONNECTION_STRING).then(db => {
   app.set('db', db);
